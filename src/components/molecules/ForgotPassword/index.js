@@ -2,8 +2,9 @@ import React, {useState} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {RadioButton} from 'react-native-paper';
 import {colors} from '../../../utils';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
-const ForgotPassword = () => {
+const ForgotPassword = ({onPress}) => {
   const [checked, setChecked] = useState(false);
   return (
     <View style={styles.container}>
@@ -17,7 +18,9 @@ const ForgotPassword = () => {
         />
         <Text style={styles.remember}>Remember me</Text>
       </View>
-      <Text style={styles.forgot}>Forgot password?</Text>
+      <TouchableOpacity onPress={onPress}>
+        <Text style={styles.forgot}>Forgot password?</Text>
+      </TouchableOpacity>
     </View>
   );
 };

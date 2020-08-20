@@ -6,10 +6,9 @@ import IC_OurBurger from './our-burger-icon.svg';
 import IC_OurBurger_active from './our-burger-icon-active.svg';
 import IC_Star from './star-icon.svg';
 import IC_Star_active from './star-icon-active.svg';
-import IC_Track from './track-icon-active.svg';
-import IC_Track_active from './track-icon.svg';
-import IC_Wallet from './wallet-icon-active.svg';
-import IC_Wallet_active from './wallet-icon.svg';
+import IC_Profile from './Profil.svg';
+import IC_Profile_Active from './Profil_Aktif.svg';
+import IC_NotifOn from './NotifOn.svg';
 
 export {
   IC_Burger_logo,
@@ -20,8 +19,7 @@ export {
   IC_OurBurger_active,
   IC_Star,
   IC_Star_active,
-  IC_Track,
-  IC_Track_active,
-  IC_Wallet,
-  IC_Wallet_active,
+  IC_Profile,
+  IC_Profile_Active,
+  IC_NotifOn,
 };

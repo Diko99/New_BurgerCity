@@ -25,9 +25,9 @@ const LoginScreen = ({navigation}) => {
       <Input icon="email" placeholder="Email Address" />
       <Gap height={20} />
       <Input icon="password" placeholder="Password" />
-      <ForgotPassword />
+      <ForgotPassword onPress={() => navigation.navigate('Forget')} />
       <Gap height={20} />
-      <Button title="Log In" onPress={() => navigation.navigate('Forget')} />
+      <Button title="Log In" onPress={() => navigation.navigate('Home')} />
       <Gap height={30} />
       <Link type="login" onPress={() => navigation.navigate('SignIn')} />
       <View style={styles.content}>
