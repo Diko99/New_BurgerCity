@@ -33,7 +33,7 @@ const Routers = () => {
       screenOptions={{
         headerShown: false,
       }}
-      initialRouteName="Splash">
+      initialRouteName="Home">
       <Stack.Screen name="Splash" component={SplashScreen} />
       <Stack.Screen name="SignIn" component={SignInScreen} />
       <Stack.Screen name="Login" component={LoginScreen} />

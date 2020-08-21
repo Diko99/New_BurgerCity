@@ -27,11 +27,12 @@ export default HeaderItem;
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 20,
+    paddingTop: 40,
     padding: 20,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+    backgroundColor: colors.secondary,
   },
   left: {
     flexDirection: 'row',

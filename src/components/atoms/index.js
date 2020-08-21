@@ -6,5 +6,6 @@ import Link from './Link';
 import DescIntro from './DescIntro';
 import LogoBurger from './Logo';
 import Tab from './Tab';
+import Search from './Search';
 
-export {LogoBurger, Link, Bar, Button, Input, Gap, DescIntro, Tab};
+export {LogoBurger, Link, Bar, Button, Input, Gap, DescIntro, Tab, Search};

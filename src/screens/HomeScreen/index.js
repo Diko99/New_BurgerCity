@@ -1,9 +1,15 @@
 import React from 'react';
-import {StyleSheet, Text, View, Image, Dimensions} from 'react-native';
-import {IL_SliderImg} from '../../assets';
 import {colors} from '../../utils';
 import {ScrollView} from 'react-native-gesture-handler';
-import {HeaderItem, TicketItem, Gap, CustomCarousel} from '../../components';
+import {IL_SliderImg} from '../../assets';
+import {StyleSheet, Text, View, Image} from 'react-native';
+import {
+  HeaderItem,
+  TicketItem,
+  Gap,
+  CustomCarousel,
+  CustomCard,
+} from '../../components';
 
 const renderItem = () => {
   return (
@@ -18,17 +24,11 @@ const renderItem = () => {
 };
 
 const HomeScreem = () => {
-  const {width} = Dimensions.get('window');
   return (
     <View style={styles.container}>
       <HeaderItem />
-      <ScrollView>
-        <CustomCarousel
-          data={[1, 2, 3]}
-          renderItem={renderItem}
-          sliderWidth={width}
-          itemWidth={width}
-        />
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <CustomCarousel data={[1, 2, 3]} renderItem={renderItem} />
         <View style={styles.content}>
           <TicketItem title="Track Here" subtitle="Order to Track Your Food" />
           <Gap height={10} />
@@ -36,10 +36,16 @@ const HomeScreem = () => {
             title="Order Here"
             subtitle="Choice Your Delicious Burger"
           />
-          <View style={styles['wrapper-card']}>
-
-          </View>
         </View>
+        <Text style={styles['title-item']}>Best Offers</Text>
+        <ScrollView showsHorizontalScrollIndicator={false} horizontal>
+          <View style={styles['content-card']}>
+            <CustomCard menu="Cheesy Burger" idr="50.000" />
+            <CustomCard menu="Chiecken Big Burger" idr="50.000" />
+            <CustomCard menu="Beef Burger" idr="50.000" />
+            <CustomCard menu="Special Burger" idr="50.000" />
+          </View>
+        </ScrollView>
       </ScrollView>
     </View>
   );
@@ -68,5 +74,15 @@ const styles = StyleSheet.create({
   content: {
     flex: 1,
     padding: 15,
+  },
+  'title-item': {
+    fontSize: 18,
+    paddingHorizontal: 20,
+    fontWeight: 'bold',
+  },
+  'content-card': {
+    flexDirection: 'row',
+    padding: 20,
+    marginRight: -10,
   },
 });

@@ -6,10 +6,9 @@ import {
   ImageBackground,
   Dimensions,
 } from 'react-native';
-import {Button, Gap, LogoBurger} from '../../components/';
+import {Button, Gap, LogoBurger, CustomCarousel} from '../../components/';
 import {colors} from '../../utils/colors';
 import {IL_Background} from '../../assets';
-import Carousel from 'react-native-snap-carousel';
 
 const renderItem = () => {
   return (
@@ -20,16 +19,10 @@ const renderItem = () => {
 };
 
 const SplashScreen = ({navigation}) => {
-  const {width} = Dimensions.get('window');
   return (
     <ImageBackground source={IL_Background} style={styles.container}>
       <LogoBurger type="splash" />
-      <Carousel
-        data={[1, 2, 3]}
-        renderItem={renderItem}
-        sliderWidth={width}
-        itemWidth={width}
-      />
+      <CustomCarousel data={[1, 2, 3]} renderItem={renderItem} />
       <Button
         title="Get start here"
         onPress={() => navigation.navigate('SignIn')}
