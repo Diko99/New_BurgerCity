@@ -16,6 +16,7 @@ import IL_Menu_meal from './menu-meals.png';
 import IL_Menu_salad from './menu-salads.png';
 import IL_TicketBg from './ticket-background.png';
 import IL_SliderImg from './slider-image.png';
+import IL_AppBar_Bg from './app-bar-background.png';
 
 export {
   IL_Background,
@@ -36,4 +37,5 @@ export {
   IL_Menu_salad,
   IL_TicketBg,
   IL_SliderImg,
+  IL_AppBar_Bg,
 };

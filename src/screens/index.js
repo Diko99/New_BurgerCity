@@ -6,6 +6,7 @@ import HomeScreen from './HomeScreen';
 import OurBurgerScreen from './OurBurgerScreen';
 import FavouriteScreen from './FavouriteScreen';
 import ProfileScreen from './ProfileScreen';
+import BurgerMenuScreen from './BurgerMenuScreen';
 
 export {
   SplashScreen,
@@ -16,4 +17,5 @@ export {
   OurBurgerScreen,
   FavouriteScreen,
   ProfileScreen,
+  BurgerMenuScreen,
 };

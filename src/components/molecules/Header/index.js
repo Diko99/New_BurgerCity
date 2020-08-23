@@ -1,23 +1,23 @@
 import React from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import {IL_Logo, IC_NotifOn} from '../../../assets';
 import {colors} from '../../../utils';
 
-const HeaderItem = () => {
+const HeaderItem = ({type, onPress}) => {
   return (
     <View style={styles.container}>
       <View style={styles.left}>
-        <Text style={styles['item-left']}>EN</Text>
-        <MaterialIcons
-          name="keyboard-arrow-down"
-          size={25}
-          color={colors.primary}
-        />
+        {type === 'back' ? null : <Text style={styles['item-left']}>EN</Text>}
+        <TouchableOpacity onPress={onPress}>
+          <MaterialIcons
+            name={type === 'back' ? 'arrow-back' : 'keyboard-arrow-down'}
+            size={25}
+            color={colors.primary}
+          />
+        </TouchableOpacity>
       </View>
-      <View style={styles.center}>
-        <Image source={IL_Logo} />
-      </View>
+      <Image source={IL_Logo} style={styles.logo(type)} />
       <IC_NotifOn />
     </View>
   );
@@ -43,8 +43,8 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: colors.primary,
   },
-  center: {
-    marginLeft: -20,
+  logo: (type) => ({
+    marginLeft: type === 'back' ? 0 : -20,
     alignItems: 'center',
-  },
+  }),
 });

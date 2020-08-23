@@ -16,7 +16,9 @@ export default Search;
 
 const styles = StyleSheet.create({
   container: {
-    margin: 25,
+    marginTop: 30,
+    marginBottom: 20,
+    marginHorizontal: 25,
     alignItems: 'center',
     flexDirection: 'row',
     backgroundColor: colors.secondary,

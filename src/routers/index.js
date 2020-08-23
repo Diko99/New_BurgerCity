@@ -10,6 +10,7 @@ import {
   OurBurgerScreen,
   FavouriteScreen,
   ProfileScreen,
+  BurgerMenuScreen,
 } from '../screens';
 import {BottomNavigator} from '../components';
 
@@ -39,6 +40,7 @@ const Routers = () => {
       <Stack.Screen name="Login" component={LoginScreen} />
       <Stack.Screen name="Forget" component={ForgetScreen} />
       <Stack.Screen name="Home" component={MainApp} />
+      <Stack.Screen name="BurgerMenu" component={BurgerMenuScreen} />
     </Stack.Navigator>
   );
 };
